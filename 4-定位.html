@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         *{
+            margin:0;
+        }
+        div{
+
+            width: 100px;
+            height: 50px;
+            display: inline-block;
+
+        }
+    
+    #div1{
+        background-color: aquamarine;
+
+    }
+    #div2{
+        background-color: rgb(176, 127, 255);
+        position: relative;
+        /* left: 50px;
+        top: 5px; */
+        
+    }
+    #div3{
+        background-color: rgb(127, 161, 255);
+        
+    
+    }
+    #div0{
+    width: 500px;
+        height: 300px;
+        background-color: brown;
+        margin: 50PX;
+        position: relative;
+
+
+    }
+    /* position:
+        relative 相对定位 相对于自己原来的位置，定位后空间不释放 
+        
+        absolute 相对定位 相对于最近已定位的祖先元素
+        */
+
+
+
+    /* display:block 块级元素  自己占一行 可以设置宽高
+
+       div h1-h6 p ul ol table
+    display:inline；行级元素 多个占一行 不可以设置宽高
+    span a strong b
+     display: inline-block; 行级块元素 既可以多个占一行又可以自己占一行
+    */
+ 
+    
+    </style>
+
+
+
+</head>
+<body>
+    <div id="div0">
+     <div id="div1">
+         1
+    </div><div id="div2">
+         2
+    </div><div id="div3">
+         3
+     </div>
+</div>
+
+
+    
+   
+   
+
+
+</body>
+</html>
