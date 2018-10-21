@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    div{
+        background-color: aqua;
+
+    }
+    #aa{
+        width: 50px;
+        /* height: 200px; */
+        background-color: brown;
+
+
+    }
+    .bb{
+        background-color: rgb(131, 54, 141);
+
+
+    }
+    h2{
+        background-color: deeppink;
+    }
+    
+    
+    </style>
+    <!-- style 最高  1000
+     id 100
+     class 、伪类  10   
+     标签  、伪元素1
+     优先级相同的情况下 写再在下面的优先级高
+     在属性后面加!important优先级最高
+    -->
+
+</head>
+<body>
+    
+
+    <div id="aa" class="bb cc">111</div>
+    <div id="cc">555</div>
+    <h2 id="h2">hahahaha</h2>
+    <div class="bb">222</div>
+    
+</body>
+</html>
