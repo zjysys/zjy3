@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+        }
+        li{
+            list-style: none;
+
+        }
+        .tab_menu{
+            overflow: hidden;
+        }
+        .tab_menu li{
+            float: left;
+            height: 30px;
+            width: 50px;
+            border: 1px solid rgb(79, 250, 241);
+            background: rgb(233, 152, 179);
+            margin-right: 2px;
+            cursor: pointer;
+        }
+        
+        .tab_menu .selected{
+            background: rgb(36, 248, 238);
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_menu">
+            <ul>
+                <li class="selected">时事</li>
+                <li>体育</li>
+                <li>娱乐</li>
+            </ul>
+        </div>
+        <div class="tab_box">
+            <div class="active">时事</div>
+            <div>体育</div>
+            <div>娱乐</div>
+
+        </div>
+
+    </div>
+
+    <script src="jquery-1.12.4.js"></script>
+
+    <script>
+        
+    </script>
+    
+</body>
+</html>

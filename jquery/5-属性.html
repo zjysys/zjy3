@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="输入用户名" id="txt">
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+       
+        // $('#txt').on('focus',function(){
+        //     $(this).val("");
+        // })
+         // $('#txt').on('blur',function(){  //blur 失去焦点
+        //     console.log( $(this).val());
+
+        // })
+    $('#txt').on('focus',function(){  //focus 获取焦点
+        // value 输入框输入的值
+        // defaultValue 输入框默认的值
+        console.log(this.value);
+        console.log(this.defaultValue);
+        // 1.修改value
+        if(this.value == this.defaultValue){
+            this.value = "";
+         
+        }
+        // 添加.active
+    //     $(this).addClass('active');
+
+     })
+   
+    $('#txt').on('blur',function(){  // blur失去焦点
+        //1.value 设置
+        if(this.value == ""){
+            this.value = this.defaultValue;
+        }
+        // 2.class 清楚
+    });
+
+    </script>
+
+
+
+    
+</body>
+</html>

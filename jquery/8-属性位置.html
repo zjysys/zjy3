@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         #div1{
+            width: 200px;
+            height: 200px;
+            background: rgb(206, 102, 209);
+            margin: 0px;
+
+
+            }
+         #div0{
+            width: 500px;
+            height: 600px;
+            background: pink;
+            margin: 50px;
+
+           
+
+            }
+        body{
+            height: 2000px;
+
+         }   
+    </style>
+    
+</head>
+<body>
+    <div id="div0">
+            <div id="div1">hahahaha</div>
+    </div>
+    
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        // console.log( $('#div1').offset().left);
+        // console.log( $('#div1').position());
+
+        $(window).on('scroll',function(){
+            //console.log(111);
+            console.log( $(window).scrollTop());
+        });
+
+        
+
+    </script>
+    
+</body>
+</html>
