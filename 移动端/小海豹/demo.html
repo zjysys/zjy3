@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            *{
+        margin: 0;
+        padding: 0;
+    
+        }
+
+           h2{
+            width: 960px;
+            height: 100px;
+            margin: 30px auto 0;
+            background: aquamarine;
+            text-align: center;
+            line-height: 100px;
+            
+        }
+
+        .img02,.img03{
+            display: none;
+        }
+
+        .img01{
+            display: block;
+        }
+
+        .img-box{
+            width: 960px;
+            margin: 50px auto 0;
+        }
+
+        .img-box img{
+            width: 100%;
+        }
+
+        .content{
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+    
+        .left{
+            width: 630px;
+            height: 300px;
+            background: red;
+            float: left;
+            display: table;
+        }
+
+        .right{
+            width: 300px;
+            height: 300px;
+            background: blueviolet;
+            float:right;
+            display: table;
+
+        }
+        .left p,.right p{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        @media screen and (max-width:960px){
+            h2{
+                width: 100%;
+            }
+        }
+        
+    
+            
+        </style>
+    </head>
+    <body>
+        <h2>页头</h2>
+        <h2>标题</h2>
+    
+        <div class="img-box">
+            <img src="img/01.jpg" class="img01" alt="">
+            <img src="img/01_s.jpg" class="img02" alt="">
+            <img src="img/01_s_2x.jpg" class="img03" alt="">
+            
+        </div>
+        <div class="content">
+            <div class="left">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sem erat, egestas quis luctus ut, rhoncus vitae risus. Integer venenatis libero sit amet sapien dictum, quis bibendum mi volutpat. Cras pretium quam quis magna facilisis, eget feugiat nisi lacinia.</p>
+            </div>
+        </div>
+        <h2>页尾</h2>
+        
+    </body>
+    </html>

@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.page-1{
+    background: #083846;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+}
+.page-1 .img0{
+    width: 248px;
+    position: absolute;
+    top: 2%;
+    margin-left: -124px;
+    left: 50%;
+}
+.page-1 .img1{
+    width: 185px;
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    margin-left: 50%;
+}
+
+
+
+/* 加动画 */
+.moveFromTop{
+    animation: moveFromTop 0.4s ease forwards;
+}
+@keyframes moveFromTop{
+    from{
+        transform: translateY(-100%);
+    }
+}

@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: rgb(211, 210, 210);
+
+}
+.header{
+    height:51.5px;
+    width: 390.4px;
+    /* color: #fff; */
+    background: #06c1ae;
+    border-bottom: 1px solid #21897d;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    position: relative;
+}
+#nav-bar{
+    background: #06c1ae;
+    height: 3.2rem;
+    border-bottom: 1px solid #21897d;
+    display: flex;
+}
+#nav-bar .area{
+    width:83.5px;
+    height: 50.5px;
+    display: block;
+
+}
+#nav-bar input{
+    width: 257.9px;
+    height: 32px;
+    overflow: hidden;  
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    margin-top: 7px;
+    
+}
+
+#nav-bar .my{
+    widows: 341.4px;
+    height: 50.5px;
+    margin-right: 0;
+    
+
+}
+
+.img-box img{
+    position: relative;
+    width: 390.4px; 
+    height:114.51px;   
+}
+

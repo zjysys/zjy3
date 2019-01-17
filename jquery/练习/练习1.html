@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #div1{
+            width: 400px;
+            height: 400px;
+            background: brown;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: burlywood;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="div1">
+        111
+        <div id="div2">
+            222
+        </div>
+    </div>
+    <select id="school">
+
+        <option value="aa">北京</option>
+        <option value="aa">上海</option>
+        <option value="aa">深圳</option>
+
+    </select>
+    <script src="jquery-1.12.4.js"></script>
+    <script>
+        $('#div1').on('mouseenter',function(){
+            console.log('div11 enter');
+        })
+        $('#div1').on('mouseenter',function(){
+            console.log('div11 enter');
+        })
+
+    </script>
+    
+</body>
+</html>
