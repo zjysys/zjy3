@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div id="app">
+        {{count}}
+        <!-- <button v-on:click="add">click</button> -->
+        <button v-on:click="add(2)">click</button>
+        <button v-on:click="add(3)">click</button>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    //    var vm = new Vue({
+    //         el:'#app',
+    //         data:{
+    //             count:0
+    //         },
+    //         methods: {
+    //             add(){
+    //                 //方法中要用this访问上面的属性
+    //                 console.log(this);
+    //                 this.count++;
+    //             }
+    //         }
+    //     })
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                count:0
+            },
+            methods: {
+                add(num){
+                    //通过this.count访问data下的属性
+                    //console.log(this);
+                    this.count+=num;
+                }
+            }
+        })
+    </script>
+    
+</body>
+</html>

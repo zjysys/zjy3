@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model</title>
+</head>
+<body>
+
+    <div id="app">
+        <div v-if="a">哈哈哈</div>
+        <div v-else>hehehe</div>
+        <h2 v-if="b == 'x'">xxxxyy</h2>
+        <h2 v-else-if="b == 'y'">yyyyyy</h2>
+        <h2 v-else>zzzzzz</h2>
+
+        <div v-show="a">
+            hahahah 
+        </div>
+
+    </div>
+
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                a:false,
+                b:'x'
+            }
+        })
+        
+    </script>
+    
+</body>
+</html>

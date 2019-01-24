@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active{
+            color: palevioletred;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="arr">
+        <button @click="add()">add</button>
+        <ul>
+            <!--  val 数组中的元素 index 代表索引  -->
+            <li v-for="(obj,index) in list" :class="{active:obj.isA}" @click="change(obj)">{{obj.val}}
+             <button @click="del(index)">del</button>
+            </li>
+        </ul>
+
+    </br>
+    </div>
+    
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                 list:[
+                // {
+                //     val:'',
+                //     isA:true
+
+                // }
+                ],
+
+            },
+            methods:{
+                add(){
+                    this.list.push({
+                        
+                        val:this.arr,
+                        isA:false
+                    });
+                    this.arr = '';
+                },
+                del(index){
+                    //1 从哪开始删除， 删除多少个
+
+                    this.list.splice(index,1);
+                },
+                change(obj){
+
+                    obj.isA = !obj.isA;
+
+                }
+            }
+        });
+        
+    </script>
+    
+</body>
+</html>
