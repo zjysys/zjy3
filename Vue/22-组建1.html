@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <zujian name="111" age="22"></zujian>
+        <zujian name="222" age="23"></zujian>
+
+    </div>
+    <!-- 
+    <template id="temp">
+        <div>
+            <h1>{{name}}</h1>
+            <p>{{age}}</p>
+        </div>
+    </template> 
+    -->
+    <script src="vue.js"></script>
+    
+    <script type="text/template" id="temp">
+        <div>
+            <h1>{{name}}</h1>
+            <p>{{age}}</p>
+        </div>
+    </script>
+    <script>
+        //父组件向子组件传值 -props
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                
+            },
+            components:{
+                "zujian":{
+                   // template:"<h1>我是组建{{name}}-{{age}}</h1>",
+                   template:"#temp",
+                    props:['name','age']
+                }
+            }
+        });
+        
+    </script>    
+</body>
+</html>

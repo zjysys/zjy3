@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <template id="temp">
+        <div class="container">
+            <div class="title">{{title}}
+                <span>[X]</span>
+            </div>
+            <hr>
+            <div class="content">内容</div>
+        </div>
+        
+
+    </template>
+    <script src="vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+
+            },
+            components:{
+                'mydialog':{
+                    template:"#temp"
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>

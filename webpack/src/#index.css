@@ -1,0 +1,13 @@
+#div2{
+    /* background: pink; */
+    width: 500px;
+    height:5000px;
+    background:url('./img/ddd.jpg') 0 0 no-repeat;
+
+}
+#div3{
+    width: 600px;
+    height: 700px;
+    background:url('./img/01_s.jpg') 0 0 no-repeat;
+
+}
