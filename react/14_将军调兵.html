@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="root"></div>
+        <script src="react.development.js"></script>
+        <script src="react-dom.development.js"></script>
+        <script src="browser.min.js"></script>
+        <script type="text/babel">
+         class MyComponent extends React.Component{
+                constructor(params){//把实例化参数传到父组件中  constructor构造函数
+                    super(params);
+
+                    this.state = {
+                        count:200,
+                        numA:100,
+                        numB:80
+                    }
+                    this.addHandler = this.addHandler.bind(this);//改this
+
+                }
+                addHandler(name){
+                    
+                    if(this.state.count>=val){
+                        this.setState({
+                        count:this.state.count = this.state.count-val,
+                        ['num'+name]:this.state['num'+name]+val,
+                     })
+                    }
+                    else{
+                        alert("士兵剩余数量不足20人");
+                    }
+                    
+                }
+                render(){
+                    return(
+                        <div>
+                            <h2>剩余士兵数量{this.state.count}</h2>
+                            <Gen name="A" num={this.state.numA} addHandler={this.addHandler}></Gen>
+                            <Gen name="B" num={this.state.numB} addHandler={this.addHandler}></Gen>
+                        </div>
+                    );
+                }
+
+            }
+        class Gen extends React.Component{
+            render(){
+                return(
+                    <div>
+                        <h4>将军{this.props.name}有士兵:{this.props.num}</h4>
+                        <input type="number" ref={ input =>{this.myInput = input}}/>  
+                        <button onClick={()=>{
+                            this.props.addHandler(this.props.name,this.myInput.value)}}>调兵
+                            </button>   
+                    </div>
+                );
+            }
+          
+        }
+            
+        
+    
+        // class Gen extends React.Component{
+        //     render(){
+        //         return(
+        //             <div>
+        //                 <h4>将军{this.props.name}有士兵:{this.props.name}</h4>
+                        
+        //                 <button onClick={()=>{
+        //                     this.props.addHandler(this.props.name)}}>调兵
+        //                     </button>   
+        //             </div>
+                    
+        //         )
+        //     }
+        // }
+
+            
+            ReactDOM.render(<MyComponent></MyComponent>,document.getElementById('root'));
+        </script>
+    
+</body>
+</html>

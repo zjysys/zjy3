@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div id="root"></div>
+        <script src="react.development.js"></script>
+        <script src="react-dom.development.js"></script>
+        <script src="browser.min.js"></script>
+        <script type="text/babel">
+         class MyComponent extends React.Component{
+                constructor(params){//把实例化参数传到父组件中  constructor构造函数
+                    super(params);
+                    this.state = {
+                        todos:['吃饭','睡觉','看电影']
+                    }
+                    this.addHandler = this.addHandler.bind(this);//改this
+
+                }
+                addHandler(val){//val是形参随便起
+                    //console.log('add 调用了 addHandler' +val);
+                    let todos = [...this.state.todos];//对象的属性名和变量同名时可以简写
+                    todos.push(val);
+                    this.setState({//原生语法改
+                        todos
+                     })
+                }
+                render(){
+                    return(
+                        <div>
+                            <h1>我在这。。。。</h1>
+                            <Add addHandler={this.addHandler}></Add>
+                            <List todos={this.state.todos}></List>
+                        </div>
+                    )
+                }
+
+            }
+        class Add extends React.Component{
+            constructor(params){
+                super(params);
+                this.add = this.add.bind(this);
+            }
+            add(){
+                //判断输入框是否有值
+                if(this.myInput.value){
+                    //调用MyComponent组件addHandler 添加一条数据
+                    this.props.addHandler(this.myInput.value);
+                    //清空input的value
+                    this.myInput.value = "";
+
+                }
+            }
+            render(){
+                return(
+                    <div>
+                        <input type="text" ref={input=>{this.myInput = input}}/> 
+                        <button onClick={this.add}>add</button>   
+                    </div>
+                )
+            }
+        }
+        class List extends React.Component{
+            render(){
+                return(
+                    <ul>
+                        {
+                            this.props.todos.map(function(val,index) {//通过此取到值
+                                return <li key={index}>{val}</li>
+                                
+                            })
+                        }
+                             
+                    </ul>
+                )
+            }
+        }
+
+            
+            ReactDOM.render(<MyComponent></MyComponent>,document.getElementById('root'));
+        </script>
+    
+</body>
+</html>
